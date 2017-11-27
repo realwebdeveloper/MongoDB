@@ -18,7 +18,6 @@ exports.handleRequest = function (request, response) {
                     case 'peopleList':
                         response.writeHead(200, { 'Content-Type': 'text/html' });
                         database.queryAll(function (data) {
-                            console.log(data);
                             response.write(data);
                             response.end();
                         });
