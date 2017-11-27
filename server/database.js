@@ -10,7 +10,6 @@ exports.insert = function(data) {
         db.collection('peopleList', function (err, collection) {
             if (err) throw err;
             collection.insert(data);
-
         });
 
     });
@@ -28,10 +27,8 @@ exports.queryAll = function(callback) {
 
             collection.find().toArray(function (err, items) {
                 if (err) throw err;
-                // console.log(JSON.stringify(items));
                 callback(JSON.stringify(items));
             });
-
         });
 
     });
